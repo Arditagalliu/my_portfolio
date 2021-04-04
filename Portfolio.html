@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Doc</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var prevdisp = ["","",""];
+            $( document ).ready( function() {
+                if (localStorage.getItem("theme_onoff")) {
+                    let portfolio_theme = {}
+                    portfolio_theme.first = localStorage.getItem("theme_first");
+                    portfolio_theme.second = localStorage.getItem("theme_second");
+                    portfolio_theme.third = localStorage.getItem("theme_third");
+                    portfolio_theme.fourth = localStorage.getItem("theme_fourth");
+                    portfolio_theme.fifth = localStorage.getItem("theme_fifth");
+                    portfolio_theme.sixth = localStorage.getItem("theme_sixth");
+                    portfolio_theme.seventh = localStorage.getItem("theme_seventh");
+                    $("body").get(0).style.setProperty("--first",portfolio_theme.first);
+                    $("body").get(0).style.setProperty("--second", portfolio_theme.second);
+                    $("body").get(0).style.setProperty("--third", portfolio_theme.third);
+                    $("body").get(0).style.setProperty("--fourth", portfolio_theme.fourth);
+                    $("body").get(0).style.setProperty("--fifth", portfolio_theme.fifth);
+                    $("body").get(0).style.setProperty("--sixth", portfolio_theme.sixth);
+                    $("body").get(0).style.setProperty("--seventh", portfolio_theme.seventh);
+                }
+                if (window.innerWidth < 801) {
+                    $('.about_cont').css('display', 'none');
+                    $('.social_cont').css('display', 'none');
+                    $('.icons_cont').css('display', 'none');
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+                <ul class="nav1">  
+                    <li class="title" onclick="location.href='Portfolio.html'">My Portfolio</li>
+                    <li id="menu_btn"><img src="icons/menu.png" alt="menu"></li>  
+                </ul>
+                <ul class="nav2">
+                    <li id="close_btn"><img src="icons/close.png" alt="close"></li>
+                    <li id="theme_btn"><div>Theme</div> 
+                        <input type="checkbox" id="switch" />
+                        <label for="switch"></label>
+                    </li>
+                    <li onclick="location.href='Projects.html'">My Projects</li> 
+                    <li onclick="location.href='Contact.html'">Contact me</li>
+                    <li onclick="location.href='https:\/\/www.google.com'">New version</li>
+                </ul>
+                <ul class="nav3">
+                    <li id="theme_btn2"> 
+                        <input type="checkbox" id="switch2" />
+                        <label for="switch2"></label>
+                    </li>
+                    <li onclick="location.href='Portfolio.html'">Home</li>
+                    <li onclick="location.href='Projects.html'">My Projects</li> 
+                    <li onclick="location.href='Contact.html'">Contact me</li>
+
+                </ul>
+            </div>
+        </header>
+        <div class="intro">
+            <!--<a href="mailto:ardit3139@gmail.com" target="blank">mail</a>-->
+            <div class="greeting">>_ Hello!</div>
+            <div class="name">>_ I'm Ardit</div>
+            <div class="job">>_</div>
+            
+        </div>
+        <main>
+            <div class="m_intro">Working with</div>
+            <div class="container">
+                <ul id="front">
+                    <span class="myskills"> Front-End:</span> <br>
+                    <li>HTML</li>
+                    <li>CSS, SASS</li>
+                    <li>JS (jQuery, Ajax)</li>
+                    <li>React.js</li>
+                    <li>Bootstrap</li>
+                </ul>
+                <ul id="back">
+                    <span class="myskills"> Back-End:</span> <br>
+                    <li>Node.js</li>
+                    <li>Python (Django)</li>
+                    <li>Java</li>
+                    <li>Mongo DB</li>
+                    <li>MySQL</li>
+                </ul>
+                <ul id="tools">
+                    <span class="myskills"> Tools:</span> <br>
+                    <li>Git/GitHub</li>
+                    <li>VS Code</li>
+                    <li>NPM, PIP</li>
+                    <li>Docker</li>
+                </ul>
+            </div>
+        </main>
+        <div class="body_cont">
+            <div class="name_cont" id="name_container">A</div>
+            <div class="sum_cont">
+                <div class="photo_cont">
+                    <img src="icons/web-development.png" alt="photo" width="200px"></img>
+                    <div id="job2"> I'm a Web Developer!</div>
+                </div>
+                
+                <div class="summ_cont">
+                    <ul id="front">
+                        <span class="myskills"> Front-End:</span> <br>
+                        <li>HTML</li>
+                        <li>CSS, SASS</li>
+                        <li>JS (jQuery, Ajax)</li>
+                        <li>React.js</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                    <ul id="back">
+                        <span class="myskills"> Back-End:</span> <br>
+                        <li>Node.js</li>
+                        <li>Python (Django)</li>
+                        <li>Java</li>
+                        <li>Mongo DB</li>
+                        <li>MySQL</li>
+                    </ul>
+                    <ul id="tools">
+                        <span class="myskills"> Tools:</span> <br>
+                        <li>Git/GitHub</li>
+                        <li>VS Code</li>
+                        <li>NPM, PIP</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="foo_btn"><p class="footer_name">Footer</p> <div class="f_btn">+</div></div>
+            <div class="about_cont">
+                <p>About Me:</p>
+                <ul>
+                    <li><img src="icons/placeholder.png" alt="linkedin">Athens,Greece</li>
+                    <li><img src="icons/mortarboard.png" alt="linkedin" height="100px">Piraeus University</li>
+                    <li><img src="icons/programming.png" alt="linkedin">IT Student</li>
+                </ul>
+            </div>
+            <div class="icons_cont">
+                    <p>The icons are from:</p> <br>
+                    <a href="https://www.flaticon.com/" title="Flaticon" class="iconsrc">
+                        www.flaticon.com
+                    </a>
+                    <br><br> Made by: <br>
+                    <a href="https://www.freepik.com" title="Freepik" class="iconcreator">
+                        Freepik
+                    </a>, 
+                    <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect" class="iconcreator">
+                        Pixel perfect
+                    </a>
+            </div>
+            <div class="social_cont">
+                <p>My social Media:</p>
+                <ul>
+                <li onclick="window.open('https:\/\/www.linkedin.com/in/ardit-agalliu/','_blank');">
+                    <img src="icons/linkedin.png" alt="linkedin">LinkedIn
+                </li>
+                
+                <li onclick="window.open('https:\/\/gr.pinterest.com/ardit_a/','_blank');">
+                    <img src="icons/pinterest.png" alt="linkedin">Pinterest
+                </li>
+                 
+                <li onclick="window.open('https:\/\/github.com/Arditagalliu','_blank');">
+                    <img src="icons/github.png" alt="linkedin">Github
+                </li>
+                </ul>
+            </div><br>
+            <div class="tip">
+                This Portfolio is an old implementation, <br>
+                Checkout the new one. <a href="http://"> Here</a>
+            </div>
+        </footer>
+        <script src="animation.js"></script>
+    </body>
+</html>

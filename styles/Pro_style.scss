@@ -1,0 +1,615 @@
+@import './style.scss';
+.p_p_cont {
+    a {
+        text-decoration: none;
+        color: var(--second);
+        font-weight: bold;
+        background: var(--fourth);
+        text-align: center;
+        padding: 2px;
+        &:hover {
+            background: var(--second);
+            color: var(--fourth); 
+        }
+    }
+}
+@media (max-width: 351px) {
+    #pro_body_cont {
+        display: block;
+        margin-top: 10vh;
+        min-height: 70vh;
+        .pro_title {
+            @include myshadow(var(--sixth));
+            text-align: center;
+            background: var(--first);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: var(--fourth);
+            width: 90%;
+            position: relative;
+            top: 6vh;
+            left: 5%;
+            font-size: 5vw;
+        }
+        .pro_container {
+            @include myshadow(var(--sixth));
+            position: relative;
+            width: 90%;
+            min-height: 70vh;
+            background: var(--first);
+            margin-top: 12%;
+            margin-left: 5%;
+            color: var(--fourth);
+            padding: 5%;
+            display: grid;
+            grid-gap: 10px;
+            .pro_item {
+                .p_item_title {
+                    text-align: center;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 4vw;
+                    width: 100%;
+                    background: var(--second);
+                    color: var(--fourth);
+                }
+                .p_item_cont {
+                    display: flex;
+                    padding: 5px;
+                    height: 85%;
+                    .p_img_cont {
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        width: 20%;
+                        justify-self: center;
+                        justify-content: center;
+                        padding-right: 5px;
+                    }
+                    .p_p_cont {
+                        padding: 10px;
+                        margin-top: auto;
+                        border-left: 5px;
+                        border-left-color: var(--second);
+                        border-left-style: solid;
+                        height: 100%;
+                        flex: 1;
+                    }
+                }
+            }
+            grid-template-rows: auto auto;
+            grid-template-columns: auto;
+        }
+        #contact_me_cont {
+            min-height: 80vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: 50px;
+            .con_sample {
+                font-weight: bold;
+                color: var(--third);
+                font-size: 6vw;
+            }
+            #gmail_img {
+                justify-self: right;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                width: 50px;
+            }
+            #gmail {
+                grid-column: 2/6;
+                #mailme {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--second);
+                    background: #FFAE42;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: var(--second);
+                        color: #FFAE42;
+                    }
+                }
+            }
+            #skype_img {
+                justify-self: right;
+                grid-row: 2/3;
+                grid-column: 1/2;
+                width: 50px;
+            }
+            #skype {
+                grid-column: 2/6;
+                #call {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--first);
+                    background: #add8e6;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #add8e6;
+                    }
+                }
+            }
+            #telegram_img {
+                grid-column: 1/2;
+                width: 50px;
+                grid-row: 3/4;
+            }
+            #telegram {
+                grid-column: 2/6;
+                #send {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: #FFAE42;
+                    background: #003366;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #003366;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (min-width: 351px) and (max-width: 800px) and (orientation:portrait){
+    #pro_body_cont {
+        display: block;
+        margin-top: 10vh;
+        min-height: 70vh;
+        .pro_title {
+            @include myshadow(var(--sixth));
+            text-align: center;
+            background: var(--first);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: var(--fourth);
+            width: 90%;
+            position: relative;
+            top: 6vh;
+            left: 5%;
+            font-size: 5vw;
+        }
+        .pro_container {
+            @include myshadow(var(--sixth));
+            position: relative;
+            width: 90%;
+            min-height: 70vh;
+            background: var(--first);
+            margin-top: 12%;
+            margin-left: 5%;
+            color: var(--fourth);
+            padding: 5%;
+            display: grid;
+            grid-gap: 10px;
+            .pro_item {
+                .p_item_title {
+                    text-align: center;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 4vw;
+                    width: 100%;
+                    background: var(--second);
+                    color: var(--fourth);
+                }
+                .p_item_cont {
+                    display: flex;
+                    padding: 5px;
+                    height: 85%;
+                    .p_img_cont {
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        width: 20%;
+                        justify-self: center;
+                        justify-content: center;
+                        padding-right: 5px;
+                    }
+                    .p_p_cont {
+                        padding: 10px;
+                        margin-top: auto;
+                        border-left: 5px;
+                        border-left-color: var(--second);
+                        border-left-style: solid;
+                        height: 100%;
+                        flex: 1;
+                    }
+                }
+            }
+            grid-template-rows: auto auto;
+            grid-template-columns: auto;
+        }
+        #contact_me_cont {
+            min-height: 80vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: 50px;
+            .con_sample {
+                font-weight: bold;
+                color: var(--third);
+                font-size: 5vw;
+            }
+            #gmail_img {
+                grid-column: 5/6;
+                width: 100px;
+            }
+            #gmail {
+                grid-column: 1/4;
+                #mailme {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--second);
+                    background: #FFAE42;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: var(--second);
+                        color: #FFAE42;
+                    }
+                }
+            }
+            #skype_img {
+                justify-self: right;
+                grid-row: 2/3;
+                grid-column: 1/2;
+                width: 100px;
+            }
+            #skype {
+                text-align: end;
+                justify-self: right;
+                grid-column: 3/6;
+                #call {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--first);
+                    background: #add8e6;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #add8e6;
+                    }
+                }
+            }
+            #telegram_img {
+                grid-column: 5/6;
+                width: 100px;
+            }
+            #telegram {
+                grid-column: 1/4;
+                #send {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: #FFAE42;
+                    background: #003366;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #003366;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (min-width: 351px) and (max-width: 800px) and (orientation:landscape){
+    #pro_body_cont {
+        display: block;
+        margin-top: 10vh;
+        min-height: 70vh;
+        .pro_title {
+            @include myshadow(var(--sixth));
+            text-align: center;
+            background: var(--first);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: var(--fourth);
+            width: 90%;
+            position: relative;
+            top: 11vh;
+            left: 5%;
+            font-size: 5vw;
+        }
+        .pro_container {
+            @include myshadow(var(--sixth));
+            position: relative;
+            width: 90%;
+            min-height: 70vh;
+            background: var(--first);
+            margin-top: 13%;
+            margin-left: 5%;
+            color: var(--fourth);
+            padding: 5%;
+            display: grid;
+            grid-gap: 10px;
+            .pro_item {
+                .p_item_title {
+                    text-align: center;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 3vw;
+                    width: 100%;
+                    background: var(--second);
+                    color: var(--fourth);
+                }
+                .p_item_cont {
+                    display: flex;
+                    padding: 5px;
+                    height: 85%;
+                    .p_img_cont {
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        width: 20%;
+                        justify-self: center;
+                        justify-content: center;
+                        padding-right: 5px;
+                    }
+                    .p_p_cont {
+                        padding: 10px;
+                        margin-top: auto;
+                        border-left: 5px;
+                        border-left-color: var(--second);
+                        border-left-style: solid;
+                        height: 100%;
+                        flex: 1;
+                    }
+                }
+            }
+            grid-template-rows: auto auto;
+            grid-template-columns: auto;
+        }
+        #contact_me_cont {
+            min-height: 80vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: 50px;
+            .con_sample {
+                font-weight: bold;
+                color: var(--third);
+                font-size: 3vw;
+            }
+            #gmail_img {
+                grid-column: 5/6;
+                width: 100px;
+            }
+            #gmail {
+                grid-column: 1/4;
+                #mailme {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--second);
+                    background: #FFAE42;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: var(--second);
+                        color: #FFAE42;
+                    }
+                }
+            }
+            #skype_img {
+                justify-self: right;
+                grid-row: 2/3;
+                grid-column: 1/2;
+                width: 100px;
+            }
+            #skype {
+                text-align: end;
+                justify-self: right;
+                grid-column: 3/6;
+                #call {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--first);
+                    background: #add8e6;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #add8e6;
+                    }
+                }
+            }
+            #telegram_img {
+                grid-column: 5/6;
+                width: 100px;
+            }
+            #telegram {
+                grid-column: 1/4;
+                #send {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: #FFAE42;
+                    background: #003366;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #003366;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (min-width:801px) {
+    #pro_body_cont {
+        min-height: 70vh;
+        .pro_title {
+            @include myshadow(var(--sixth));
+            text-align: center;
+            background: var(--first);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: var(--fourth);
+            width: 300px;
+            position: absolute;
+            top: 4%;
+            left: 5%;
+            font-size: 2vw;
+            transition: all 2s ease-in-out;
+            &:hover {
+                background: var(--fourth);
+                color: var(--first);
+                transition: all 1s ease-in-out;
+            }
+        }
+        .pro_container {
+            @include myshadow(var(--sixth));
+            position: relative;
+            width: 90%;
+            min-height: 70vh;
+            background: var(--first);
+            margin-top: 4%;
+            margin-left: 5%;
+            color: var(--fourth);
+            padding: 5%;
+            display: grid;
+            grid-gap: 10px;
+            .pro_item {
+                &:hover {
+                    @include myshadow(var(--sixth));
+                    .p_item_title {
+                        background: var(--fourth);
+                        color: var(--second);
+                    }
+                }
+                .p_item_title {
+                    text-align: center;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    font-size: 2vw;
+                    width: 100%;
+                    background: var(--second);
+                    color: var(--fourth);
+                }
+                .p_item_cont {
+                    display: flex;
+                    padding: 5px;
+                    height: 85%;
+                    .p_img_cont {
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        width: 25%;
+                        justify-self: center;
+                        justify-content: center;
+                        padding-right: 5px;
+                    }
+                    .p_p_cont {
+                        padding: 10px;
+                        margin-top: auto;
+                        border-left: 5px;
+                        border-left-color: var(--second);
+                        border-left-style: solid;
+                        height: 100%;
+                        flex: 1;
+                    }
+                }
+            }
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+        }
+        #contact_me_cont {
+            min-height: 80vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: 50px;
+            .con_sample {
+                font-weight: bold;
+                color: var(--third);
+                font-size: 2vw;
+            }
+            #gmail_img {
+                grid-column: 4/5;
+                width: 100px;
+            }
+            #gmail {
+                grid-column: 1/4;
+                #mailme {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--second);
+                    background: #FFAE42;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: var(--second);
+                        color: #FFAE42;
+                    }
+                }
+            }
+            #skype_img {
+                justify-self: right;
+                grid-row: 2/3;
+                grid-column: 2/3;
+                width: 100px;
+            }
+            #skype {
+                text-align: end;
+                justify-self: right;
+                grid-column: 3/6;
+                #call {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: var(--first);
+                    background: #add8e6;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #add8e6;
+                    }
+                }
+            }
+            #telegram_img {
+                grid-column: 4/6;
+                width: 100px;
+            }
+            #telegram {
+                grid-column: 1/4;
+                #send {
+                    @include myshadow(var(--sixth));
+                    text-decoration: none;
+                    color: #FFAE42;
+                    background: #003366;
+                    padding: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    &:hover {
+                        background: #FFAE42;
+                        color: #003366;
+                    }
+                }
+            }
+        }
+    }
+
+}

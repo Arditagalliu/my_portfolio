@@ -1,0 +1,134 @@
+
+$coolColors: (
+    "first":#05386b,
+    "second": #379683,
+    "third": #5cdb95,
+    "fourth": #8ee4af,
+    "fifth": #edf5e1,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$warmColors: (
+    "first":#565656,
+    "second": #76323f,
+    "third": #c09f80,
+    "fourth": #d7cec7,
+    "fifth": #c09f80,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$darkmodeColors: (
+    "first": #192428,
+    "second": #2d383c,
+    "third": #414c50,
+    "fourth": #0784b5,
+    "fifth": #39ace7,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$BlueColors: (
+    "first": #12232E,
+    "second": #203647,
+    "third": #007CC7,
+    "fourth": #4DA8DA,
+    "fifth": #EEFBFB,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$darkorangeColors: (
+    "first": #393939,
+    "second": #be4f0c,
+    "third": #FF5A09,
+    "fourth": #ec7f37,
+    "fifth": #EEFBFB,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$GrayColors: (
+    "first": #202020,
+    "second": #3F3F3F,
+    "third": #707070,
+    "fourth": #FFDf6C,
+    "fifth": #FFFFFF,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$OliveColors: (
+    "first": #3C403D,
+    "second": #39603D,
+    "third": #A3BCB6,
+    "fourth": #DADED4,
+    "fifth": #FFFFFF,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$MetalicColors: (
+    "first": #49494b,
+    "second": #bd8c7d,
+    "third": #8e8e90,
+    "fourth": #d1bfa7,
+    "fifth": #FFFFFF,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$desertColors: (
+    "first": #e1b382,
+    "second": #c89666,
+    "third": #2d545e,
+    "fourth": #12343b,
+    "fifth": #FFFFFF,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$playColors: (
+    "first": #ff1d58,
+    "second": #f75990,
+    "third": #fff685,
+    "fourth": #00DDFF,
+    "fifth": #0049B7,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$minpurpleColors: (
+    "first": #a0d2eb,
+    "second": #e5eaf5,
+    "third": #d0bdf4,
+    "fourth": #8458B3,
+    "fifth": #a28089,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$darktealColors: (
+    "first": #282828,
+    "second": #363636,
+    "third": #00564d,
+    "fourth": #00897b,
+    "fifth": #969696,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+$steelgrayColors: (
+    "first": #2F4F4F,
+    "second": #696969,
+    "third": #708090,
+    "fourth": #808080,
+    "fifth": #D3D3D3,
+    "sixth": #333,
+    "seventh": antiquewhite
+);
+
+@function color($pack, $colorrow) {
+    @return map-get($pack,$colorrow);
+}

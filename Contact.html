@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Doc</title>
+        <link rel="stylesheet" href="styles/Pro_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var prevdisp = ["","",""];
+            $( document ).ready( function() {
+                if (localStorage.getItem("theme_onoff")) {
+                    let portfolio_theme = {}
+                    portfolio_theme.first = localStorage.getItem("theme_first");
+                    portfolio_theme.second = localStorage.getItem("theme_second");
+                    portfolio_theme.third = localStorage.getItem("theme_third");
+                    portfolio_theme.fourth = localStorage.getItem("theme_fourth");
+                    portfolio_theme.fifth = localStorage.getItem("theme_fifth");
+                    portfolio_theme.sixth = localStorage.getItem("theme_sixth");
+                    portfolio_theme.seventh = localStorage.getItem("theme_seventh");
+                    $("body").get(0).style.setProperty("--first",portfolio_theme.first);
+                    $("body").get(0).style.setProperty("--second", portfolio_theme.second);
+                    $("body").get(0).style.setProperty("--third", portfolio_theme.third);
+                    $("body").get(0).style.setProperty("--fourth", portfolio_theme.fourth);
+                    $("body").get(0).style.setProperty("--fifth", portfolio_theme.fifth);
+                    $("body").get(0).style.setProperty("--sixth", portfolio_theme.sixth);
+                    $("body").get(0).style.setProperty("--seventh", portfolio_theme.seventh);
+                }
+                if (window.innerWidth < 801) {
+                    $('.about_cont').css('display', 'none');
+                    $('.social_cont').css('display', 'none');
+                    $('.icons_cont').css('display', 'none');
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+                <ul class="nav1">  
+                    <li class="title" onclick="location.href='Portfolio.html'">My Portfolio</li>
+                    <li id="menu_btn"><img src="icons/menu.png" alt="menu"></li>  
+                </ul>
+                <ul class="nav2">
+                    <li id="close_btn"><img src="icons/close.png" alt="close"></li>
+                    <li id="theme_btn"><div>Theme</div> 
+                        <input type="checkbox" id="switch" />
+                        <label for="switch"></label>
+                    </li>
+                    <li onclick="location.href='Projects.html'">My Projects</li> 
+                    <li onclick="location.href='Contact.html'">Contact me</li>
+                    <li onclick="location.href='https:\/\/www.google.com'">New version</li>
+
+                </ul>
+                <ul class="nav3">
+                    <li id="theme_btn2"> 
+                        <input type="checkbox" id="switch2" />
+                        <label for="switch2"></label>
+                    </li>
+                    <li onclick="location.href='Portfolio.html'">Home</li>
+                    <li onclick="location.href='Projects.html'">My Projects</li> 
+                    <li onclick="location.href='Contact.html'">Contact me</li>
+                </ul>
+        </header>
+        <div class="body_cont" id="pro_body_cont">
+            <div class="pro_title">Contact Me</div>
+            <div class="pro_container" id="contact_me_cont">
+                <!-- <a href="mailto:ardit3139@gmail.com" target="blank" id="gmail">
+                    <img src="icons/gmail.png" alt="gmail">
+                    <div class="contact_item_p">
+                        ask me anything you want or send your requests via email
+                    </div>
+                </a>
+                <div class="contact_item"> 
+                    <img src="icons/gmail.png" alt="gmail">
+                    <div class="contact_item_p"></div>
+                </div>
+                <div class="contact_item"> 
+                    <img src="icons/gmail.png" alt="gmail">
+                    <div class="contact_item_p"></div>
+                </div> -->
+                <div id="gmail">
+                    <p class="con_sample">Email</p>
+                    mail me for all the questions or requests you have anytime ou want. 
+                    <br><br>
+                      <a href="mailto:ardit3139@gmail.com" target="blank" id="mailme">Send Mail</a>
+                </div>
+                <img src="icons/email.png" alt="gmail" id="gmail_img">
+                <div id="skype">
+                    <p class="con_sample">Skype</p>
+                    Lets make an appointment and discuss with a video call.<br><br>
+                      <a href="skype:live:arditt99" target="blank" id="call">Call</a>
+                </div>
+                <img src="icons/skype.png" alt="skype" id="skype_img">
+                <div id="telegram">
+                    <p class="con_sample">Telegram</p>
+                    Send a message for quick questions you have or anything you want. 
+                    <br><br>
+                      <a href="https://t.me/ardit_agalliu" target="blank" id="send">Send Message</a>
+                </div>
+                <img src="icons/telegram.png" alt="telegram" id="telegram_img">
+            </div>
+        </div>
+        <footer>
+            <div class="foo_btn"><p class="footer_name">Footer</p> <div class="f_btn">+</div></div>
+            <div class="about_cont">
+                <p>About Me:</p>
+                <ul>
+                    <li><img src="icons/placeholder.png" alt="linkedin">Athens,Greece</li>
+                    <li><img src="icons/mortarboard.png" alt="linkedin" height="100px">Piraeus University</li>
+                    <li><img src="icons/programming.png" alt="linkedin">IT Student</li>
+                </ul>
+            </div>
+            <div class="icons_cont">
+                    <p>The icons are from:</p> <br>
+                    <a href="https://www.flaticon.com/" title="Flaticon" class="iconsrc">
+                        www.flaticon.com
+                    </a>
+                    <br><br> Made by: <br>
+                    <a href="https://www.freepik.com" title="Freepik" class="iconcreator">
+                        Freepik
+                    </a>, 
+                    <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect" class="iconcreator">
+                        Pixel perfect
+                    </a>
+            </div>
+            <div class="social_cont">
+                <p>My social Media:</p>
+                <ul>
+                <li onclick="window.open('https:\/\/www.linkedin.com/in/ardit-agalliu/','_blank');">
+                    <img src="icons/linkedin.png" alt="linkedin">LinkedIn
+                </li>
+                
+                <li onclick="window.open('https:\/\/gr.pinterest.com/ardit_a/','_blank');">
+                    <img src="icons/pinterest.png" alt="linkedin">Pinterest
+                </li>
+                 
+                <li onclick="window.open('https:\/\/github.com/Arditagalliu','_blank');">
+                    <img src="icons/github.png" alt="linkedin">Github
+                </li>
+                </ul>
+            </div><br>
+            <div class="tip">
+                This Portfolio is an old implementation, <br>
+                Checkout the new one. <a href="http://"> Here</a>
+            </div>
+        </footer>
+        <script src="Pro_animation.js"></script>
+    </body>
+</html>

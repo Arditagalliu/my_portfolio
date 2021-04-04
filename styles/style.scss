@@ -1,0 +1,927 @@
+@import './colors';
+@import './temps';
+
+$color: $darkmodeColors;
+$margin: 5%;
+:root {
+    --firstv1: #{color($color,first)};
+    --secondv1: #{color($color,second)};
+    --thirdv1: #{color($color,third)};
+    --fourthv1: #{color($color,fourth)};
+    --fifthv1: #{color($color,fifth)};
+    --sixthv1: #{color($color,sixth)};
+    --seventhv1: #{color($color,seventh)};
+}
+$color: $warmColors;
+:root {
+    --firstv2: #{color($color,first)};
+    --secondv2: #{color($color,second)};
+    --thirdv2: #{color($color,third)};
+    --fourthv2: #{color($color,fourth)};
+    --fifthv2: #{color($color,fifth)};
+    --sixthv2: #{color($color,sixth)};
+    --seventhv2: #{color($color,seventh)};
+}
+:root {
+    --first: #{color($color,first)};
+    --second: #{color($color,second)};
+    --third: #{color($color,third)};
+    --fourth: #{color($color,fourth)};
+    --fifth: #{color($color,fifth)};
+    --sixth: #{color($color,sixth)};
+    --seventh: #{color($color,seventh)};
+}
+.nav1, .nav2, .nav3, .body_cont {
+    display: none;
+}
+footer {
+    .tip {
+        color: var(--seventh);
+        a {
+            text-decoration: none;
+            color: var(--fifth);
+        }
+    }
+    .icons_cont {
+        padding: 10px;
+        padding-bottom: 30px;
+        border-bottom-style: solid;
+        border-bottom-width: $margin;
+        border-bottom-color: var(--fourth);
+        a {
+            font-style: none;
+            text-decoration: none;
+        }
+        .iconcreator {
+            color: var(--fourth);
+        }
+        .iconsrc {
+            color: var(--third);
+        }
+        p {
+            color: var(--seventh);
+        }
+        li {
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+            color: var(--fourth);
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        img {
+            width: 20px;
+            height: auto;
+        }
+    }
+    .social_cont {
+        display: grid;
+        align-content: center;
+        padding: 10px;
+        height: 100%;
+        border-bottom-style: solid;
+        border-bottom-width: $margin;
+        border-bottom-color: var(--fourth);
+        p {
+            color: var(--seventh);
+        }
+        li {
+            &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+            color: var(--fourth);
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        img {
+            width: 20px;
+            height: auto;
+        }
+    }
+    .about_cont {
+        padding: 10px;
+        padding-bottom: 30px;
+        height: 100%;
+        border-bottom-style: solid;
+        border-bottom-width: $margin;
+        border-bottom-color: var(--fourth);
+        p {
+            color: var(--seventh);
+        }
+        li {
+            color: var(--fourth);
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        img {
+            width: 20px;
+            height: auto;
+        }
+    }
+}
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -100%;
+	width: 60px;
+	height: 30px;
+	background: var(--fourth);
+	display: block;
+	border-radius: 30px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: var(--sixth);
+	border-radius: 20px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--fourth);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 30px;
+}
+.m_intro {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background: var(--fourth);
+    color: var(--second);
+    font-size: 5vw;
+}
+#tools, #front, #back {
+    display: flex;
+    flex-direction: column;
+    li {
+        align-self: center;
+        margin-top: 10px;
+        border-bottom-color: var(--first);
+        border-bottom-style: solid;
+        width: 70%;
+    }
+    padding: 20px;
+    width: calc(90vw);
+    min-height: 30vh;
+    flex: 1;
+    list-style: none;
+    color: var(--first);
+    
+    .myskills {
+        padding: 5px;
+        padding-left: 15px;
+        @include myshadow(var(--sixth));
+    }
+}
+#back {
+    background: var(--fourth);
+    color: var(--second);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+    li {
+        &:hover {
+            @include myshadow(var(--sixth))
+        }
+    }
+}
+.foo_btn {
+    display: flex;
+    padding: 10px;
+    @include myshadow(var(--fifth));
+    grid-column: 1/3;
+    justify-content: flex-start;
+    background: var(--fifth);
+    .footer_name {
+        flex: 1;
+    }
+}
+@media (max-width: 351px) { 
+    body {
+        background: var(--fourth);
+    }
+    .nav1 {
+        z-index: 2;
+        position: fixed;
+        @include myshadow(color($color,sixth));
+        background: var(--third);
+        list-style: none;
+        border-style: solid;
+        border-width: $margin;
+        border-color: var(--fourth);
+        min-height: 10vh;
+        max-height: 30vh;
+        padding: 10px;
+        width: 100%;
+        top: 0;
+        color: var(--first);
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        
+        :last-child {
+            @include myshadow(color($color,sixth));
+            background: var(--sixth);
+            padding: 5px;
+            padding-bottom: 3px;
+            width: 40px;
+            height: auto;
+            &:hover {
+                cursor: pointer;
+            }
+            img {
+                width: 30px;
+                height: auto;
+            }
+        }
+        :first-child {
+            margin-right: 5px;
+            flex: 1;
+            font-size:10vw;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .nav2 {
+        align-items: center;
+        color: var(--fourth);
+        background: var(--sixth);
+        list-style: none;
+        padding: 10px;
+        position: absolute;
+        min-height: 100%;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        //display: flex;
+        flex-direction: column;
+        #theme_btn {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20%;
+        }
+        li {
+            padding: 5px;
+            width: 80%;
+            font-weight: bold;
+            font-size:10vw;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            border-bottom-style: solid;
+            border-bottom-width: $margin;
+            border-bottom-color: var(--fourth);
+            //@include myshadow(color($color,sixth));
+        }
+        :first-child {
+            border: none;
+            box-shadow: none;
+            justify-self: start;
+            text-align: end;
+            align-self: flex-end;
+            top: 20px;
+            right: 20px;
+            width: 30%;
+            margin-top: 5px;
+            margin-right: 5px;
+            height: auto;
+        }
+
+    }
+    .intro {
+        @include myshadow(color($color,sixth));
+        min-height: 65vh;
+        background: var(--third);
+        padding: 15%;
+        margin: $margin;
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .greeting {
+            font-size:10vw;
+            margin-bottom: 3vh;
+        }
+        .name {
+            font-size:10vw;
+            font-weight: bold;
+            margin-bottom: 2vh;
+        }
+    }
+    main {
+        @include myshadow(color($color,sixth));
+        min-height: 90vh;
+        background: var(--third);
+        padding: 5px;
+        margin: $margin;
+        margin-top: 15vh;
+    }
+    footer {
+        z-index: 1;
+        @include myshadow(color($color,sixth));
+        margin: $margin;
+        background: var(--sixth);
+        bottom: 0;
+        position: relative;
+        min-height: 30vh;
+        display: grid;
+        grid-column: 1/2;
+        align-items: center;
+        padding: 30px;
+        justify-content: center;
+        .social_cont {
+            min-width: 80vw;
+        }
+        .foo_btn {
+            grid-column: 1/2;
+            width: 100%;
+        }
+
+    }
+    // main, footer, .intro {
+    //     display: none;
+    //  }
+}
+@media (min-width: 351px) and (max-width: 800px) and (orientation:portrait){
+    body {
+        background: var(--fourth);
+    }
+    .nav1 {
+        z-index: 2;
+        position: fixed;
+        @include myshadow(color($color,sixth));
+        background: var(--third);
+        list-style: none;
+        border-style: solid;
+        border-width: $margin;
+        border-color: var(--fourth);
+        min-height: 10vh;
+        max-height: 30vh;
+        padding: 10px;
+        width: 100%;
+        top: 0;
+        color: var(--first);
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        :last-child {
+            @include myshadow(color($color,sixth));
+            background: var(--sixth);
+            padding: 5px;
+            padding-bottom: 3px;
+            width: 40px;
+            height: auto;
+            img {
+                width: 30px;
+                height: auto;
+            }
+        }
+        :first-child {
+            margin-right: 5px;
+            flex: 1;
+            font-size:10vw;
+        }
+    }
+    .nav2 {
+        align-items: center;
+        color: var(--fourth);
+        background: var(--sixth);
+        list-style: none;
+        padding: 10px;
+        position: absolute;
+        min-height: 100vh;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        //display: flex;
+        flex-direction: column;
+        #theme_btn {
+            display: flex;
+            justify-content: flex-end;
+            gap: 30%;
+        }
+        li {
+            padding: 5px;
+            width: 80%;
+            font-weight: bold;
+            font-size:5vw;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            border-bottom-style: solid;
+            border-bottom-width: $margin;
+            border-bottom-color: var(--fourth);
+            //@include myshadow(color($color,sixth));
+        }
+        :first-child {
+            border: none;
+            box-shadow: none;
+            justify-self: start;
+            text-align: end;
+            align-self: flex-end;
+            top: 20px;
+            right: 20px;
+            width: 25%;
+            margin-top: 5px;
+            margin-right: 5px;
+            height: auto;
+        }
+
+    }
+    .intro {
+        @include myshadow(color($color,sixth));
+        min-height: 70vh;
+        background: var(--third);
+        padding: 15%;
+        margin: $margin;
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .greeting {
+            font-size:10vw;
+            margin-bottom: 3vh;
+        }
+        .name {
+            font-size:10vw;
+            font-weight: bold;
+            margin-bottom: 2vh;
+        }
+    }
+    main {
+        @include myshadow(color($color,sixth));
+        min-height: 90vh;
+        background: var(--third);
+        padding: 5px;
+        margin: $margin;
+        margin-top: 15vh;
+    }
+    footer {
+        z-index: 1;
+        @include myshadow(color($color,sixth));
+        margin: $margin;
+        background: var(--sixth);
+        bottom: 0;
+        position: relative;
+        min-height: 30vh;
+        display: grid;
+        grid-gap: 10px;
+        align-items: center;
+        padding: 30px;
+        justify-content: center;
+        .social_cont {
+            grid-column: 1/3;
+            min-width: 80vw;
+        }
+        .about_cont {
+            grid-column: 1/3;
+        }
+        .icons_cont {
+            grid-column: 1/3;
+        }
+        .tip {
+            grid-column: 1/3;
+        }
+        
+    }
+    
+    // main, footer {
+    //     display: none;
+    //  }
+}
+@media (min-width: 351px) and (max-width: 800px) and (orientation:landscape){
+    body {
+        background: var(--fourth);
+    }
+    .nav1 {
+        z-index: 2;
+        position: fixed;
+        @include myshadow(color($color,sixth));
+        background: var(--third);
+        list-style: none;
+        border-style: solid;
+        border-width: $margin;
+        border-color: var(--fourth);
+        min-height: 10vh;
+        max-height: 30vh;
+        padding: 10px;
+        width: 100%;
+        top: 0;
+        color: var(--first);
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        :last-child {
+            @include myshadow(color($color,sixth));
+            background: var(--sixth);
+            padding: 5px;
+            padding-bottom: 3px;
+            width: 40px;
+            height: auto;
+            img {
+                width: 30px;
+                height: auto;
+            }
+        }
+        :first-child {
+            margin-right: 5px;
+            flex: 1;
+            font-size:5vw;
+        }
+    }
+    .nav2 {
+        align-items: center;
+        color: var(--fourth);
+        background: var(--sixth);
+        list-style: none;
+        padding: 10px;
+        position: absolute;
+        min-height: 100vh;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        //display: flex;
+        flex-direction: column;
+        #theme_btn {
+            display: flex;
+            justify-content: flex-start;
+            gap: 31%;
+        }
+        li {
+            padding: 5px;
+            width: 80%;
+            font-weight: bold;
+            font-size:5vw;
+            border-bottom-style: solid;
+            border-bottom-width: $margin;
+            border-bottom-color: var(--fourth);
+            //@include myshadow(color($color,sixth));
+        }
+        :first-child {
+            border: none;
+            box-shadow: none;
+            justify-self: start;
+            text-align: end;
+            align-self: flex-end;
+            top: 20px;
+            right: 20px;
+            width: 20%;
+            margin-top: 5px;
+            margin-right: 5px;
+            height: auto;
+        }
+
+    }
+    .intro {
+        @include myshadow(color($color,sixth));
+        min-height: 25vh;
+        max-height: 25vh;
+        background: var(--third);
+        padding: 15%;
+        margin: $margin;
+        margin-top: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .greeting {
+            font-size:5vw;
+            margin-bottom: 3vh;
+        }
+        .name {
+            font-size:5vw;
+            font-weight: bold;
+            margin-bottom: 2vh;
+        }
+    }
+    main {
+        @include myshadow(color($color,sixth));
+        min-height: 90vh;
+        background: var(--third);
+        padding: 5px;
+        margin: $margin;
+        margin-top: 15vh;
+    }
+    footer {
+        z-index: 1;
+        @include myshadow(color($color,sixth));
+        margin: $margin;
+        background: var(--sixth);
+        bottom: 0;
+        position: relative;
+        min-height: 30vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        padding: 30px;
+        justify-content: center;
+        .social_cont {
+            grid-column: 1/3;
+            ul {
+                margin-top: 20px;
+                gap: 10px;
+                display: flex;
+            }
+        }
+        .icons_cont {
+            grid-column: 2/3;
+        }
+        .about_cont {
+            grid-column: 1/2;
+        }
+        .tip {
+            grid-column: 1/3;
+        }
+
+    }
+    // main, footer, .intro {
+    //     display: none;
+    //  }
+}
+@media (min-width:801px) {
+    body {
+        background: var(--fourth);
+        color: var(--forth);
+    }
+    .nav3 {
+        z-index: 3;
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: fixed;
+        width: 50%;
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        right: 5%;
+        top: 3%;
+        background: var(--sixth);
+        color: var(--fourth);
+        list-style: none;
+        @include myshadow(var(--sixth));
+        border-color: var(--fifth);
+        border-style: solid;
+        border-width: 2px;
+        align-content: center;
+        :last-child {
+            border: none;
+        }
+        li {
+            padding-left: 10px;
+            display: flex;
+            border-right-color: var(--fifth);
+            border-right-style: solid;
+            border-right-width: 2px;
+            font-size: 1vw;
+            position: relative;
+            width: 25%;
+            align-items: center;
+            justify-content: center;
+            color: var(--fifth);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        #theme_btn2 {
+            display: flex;
+            justify-content: center;
+            gap: 1px;
+        }
+    }
+    .body_cont {
+        min-height: 70vh;
+        display: block;
+        background: none;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        .name_cont {
+            z-index: 5;
+            position: relative;
+            font-size:4vw;
+            padding: 10px;
+            @include myshadow(var(--sixth));
+            background: var(--sixth);
+            color: var(--fourth);
+            top: 5%;
+            left: 10%;
+            width: fit-content;
+            &:hover {
+                color: var(--third);
+            }
+        }
+        .sum_cont {
+            @include myshadow(var(--sixth));
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: start;
+            padding-left: 5vw;
+            padding-top: 15vh;
+            position: relative;
+            padding-bottom: 10vh;
+            margin-top: -4%;
+            left:5%;
+            background: var(--first);
+            min-height: 50vh;
+            width: 90%;
+            .photo_cont {
+                width: 40%;
+                margin-left: 3%;
+            }
+            img {
+                border-radius: 10%;
+            }
+            #job2 {
+                padding: 10px;
+                width: 160px;
+                text-align: center;
+                margin-top: 10px;
+                min-width: fit-content;
+                background-color: var(--sixth);
+                color: var(--fourth);
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    
+                    color: var(--sixth);
+                    background-color: var(--fourth);
+                }
+            }
+            .summ_cont {
+                margin-top: -5vh;
+                margin-left: -5vw;
+                align-self: flex-start;
+                justify-content: flex-start;
+                width: 60%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            #tools, #front, #back {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                li {
+                    align-self: center;
+                    margin-top: 10px;
+                    border-bottom-color: var(--fourth);
+                    border-bottom-style: solid;
+                    width: 70%;
+                    &:hover {
+                        @include myshadow(var(--sixth));
+                        background: var(--fourth);
+                        color: var(--first);
+                    }
+                }
+                padding: 20px;
+                flex: 1;
+                list-style: none;
+                color: var(--fourth);
+                
+                .myskills {
+                    padding: 5px;
+                    padding-left: 15px;
+                }
+            }
+            #back {
+                background: var(--first);
+                color: var(--fourth);
+            }
+
+        }
+        background: linear-gradient(255deg, var(--fifth), var(--second), var(--fourth));
+        background-size: 600% 600%;
+    
+        -webkit-animation: mygradient 29s ease infinite;
+        -moz-animation: mygradient 29s ease infinite;
+        animation: mygradient 29s ease infinite;
+    }
+    
+    @-webkit-keyframes mygradient {
+        0%{background-position:0% 25%}
+        50%{background-position:100% 76%}
+        100%{background-position:0% 25%}
+    }
+    @-moz-keyframes mygradient {
+        0%{background-position:0% 25%}
+        50%{background-position:100% 76%}
+        100%{background-position:0% 25%}
+    }
+    @keyframes mygradient {
+        0%{background-position:0% 25%}
+        50%{background-position:100% 76%}
+        100%{background-position:0% 25%}
+    }
+    main {
+        * {
+            display: none;
+        }
+        display: none;
+    }.intro, .greeting, .name, .job {
+        display: none;
+    }
+    footer {
+        .foo_btn {
+           display: none;
+        }
+        z-index: 2;
+        @include myshadow(color($color,sixth));
+        background: var(--sixth);
+        bottom: 0;
+        position: relative;
+        min-height: 30vh;
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5%;
+        align-items: center;
+        padding: 30px;
+        justify-content: center;
+        .social_cont {
+            p {
+                color: var(--seventh);
+            }
+            padding-left: 10%;
+            align-content: flex-start;
+            grid-column: 3/4;
+            border-left-style: solid;
+            border-left-width: $margin;
+            border-left-color: var(--fourth);
+            border-bottom: none;
+            list-style: none;
+            li {
+                &:hover {
+                    opacity: 0.5;
+                    cursor: pointer;
+                }
+                color: var(--fourth);
+                margin-top: 10px;
+                display: flex;
+                gap: 10px;
+            }
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+        .icons_cont {
+            p {
+                color: var(--seventh);
+            }
+            padding-left: 10%;
+            grid-column: 2/3;
+            border-left-style: solid;
+            border-left-width: $margin;
+            border-left-color: var(--fourth);
+            border-bottom: none;
+        }
+        .about_cont {
+            p {
+                color: var(--seventh);
+            }
+            padding-left: 5%;
+            grid-column: 1/2;
+            border-bottom: none;
+            li {
+                color: var(--fourth);
+                margin-top: 10px;
+                display: flex;
+                gap: 10px;
+            }
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+        .tip {
+            grid-column: 1/4;
+        }
+
+    }
+}
